@@ -16,7 +16,7 @@ function Header() {
 
   return (
     <header>
-      <div className="flex justify-between items-center h-14 px-10  bg-orange-600 text-white">
+      <div className="hidden lg:flex justify-between items-center h-14 px-10  bg-orange-600 text-white">
         <ul className="flex gap-7 *:text-sm">
           <li className="flex items-center gap-3">
             <i className="pi pi-phone"></i>
@@ -41,7 +41,7 @@ function Header() {
           <Image src="/image/logo.png" alt="School Logo" width={250} height={80}/>
         </div>
 
-        <ul className="h-full flex items-center gap-5 ">
+        <ul className="h-full hidden lg:flex items-center gap-5 ">
           {
             nav_links.map(link => (
               <li key={link.title} className="uppercase text-sm font-semibold !text-black/50 !hover:text-orange-500">
@@ -52,6 +52,9 @@ function Header() {
             ))
           }
         </ul>
+        <button className="ring-1 rounded ring-orange-500 py-2 px-3 text-black lg:hidden">
+          <i className="pi pi-bars"></i>
+        </button>
       </div>
     </header>
   );

@@ -36,17 +36,17 @@ function SchoolActivities() {
   ];
   return (
     <div className="bg-slate-200">
-      <div className="text-center py-28 mb-5  max-w-2xl mx-auto">
-        <h2 className="text-5xl font-extrabold mb-6">Our Popular Activities</h2>
-        <p>
+      <div className="text-center py-28 mb-5  max-w-2xl mx-auto px-5">
+        <h2 className="text-5xl font-extrabold mb-6" data-aos="flip-down">Our Popular Activities</h2>
+        <p data-aos="flip-up">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           voluptatibus vitae minus tempora. Nobis voluptas nemo voluptatibus,
           cupiditate quasi numquam!
         </p>
       </div>
-      <ul className="grid grid-cols-3 gap-5 px-16">
+      <ul className="grid  md:grid-cols-2 lg:grid-cols-3 gap-5 px-7 lg:px-16">
         {activities.map((act) => (
-          <li key={act.title} className="w-full !bg-white shadow-md rounded-md">
+          <li key={act.title} className="w-full !bg-white shadow-md rounded-md" data-aos="fade-up">
             <div style={{width: '100%', height: 250, position: 'relative', overflow:'hidden'}}>
               <Image
                 src={act.img}
